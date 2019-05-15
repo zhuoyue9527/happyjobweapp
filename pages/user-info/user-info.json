@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "基本信息编辑",
+  "usingComponents": {
+    "i-button": "../../ui/button/index",
+    "i-input": "../../ui/input/index",
+    "i-icon": "../../ui/icon/index"
+  }
+}

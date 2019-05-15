@@ -1,0 +1,47 @@
+function formatNumber(n) {
+  n = n.toString()
+  return n[1] ? n : '0' + n
+}
+
+// 转换成月日
+function formatemd(date) {
+  date = getDate(+date)
+  var year = date.getFullYear()
+  var month = date.getMonth() + 1
+  var day = date.getDate()
+  var hour = date.getHours()
+  var minute = date.getMinutes()
+  var second = date.getSeconds()
+  return formatNumber(month) + "." + formatNumber(day)
+
+}
+// 时间戳转成年月日
+function formateDay(date) {
+  date = getDate(+date)
+  var year = date.getFullYear()
+  var month = date.getMonth() + 1
+  var day = date.getDate()
+  return date.getFullYear() + "-" + formatNumber(date.getMonth() + 1) + "-" + formatNumber(date.getDate())
+}
+// 时间戳转成年月
+function formateym(date,split=".") {
+  date = getDate(+date)
+  var year = date.getFullYear()
+  var month = date.getMonth() + 1
+  var day = date.getDate()
+  return date.getFullYear() + split + formatNumber(date.getMonth() + 1)
+}
+
+//逗号分隔字符串
+function splitStr(strArr,separator) {
+  if (!strArr || !separator){
+    return '';
+  }
+  return strArr.split(separator+'')
+}
+
+module.exports = {
+  formatemd: formatemd,
+  splitStr: splitStr,
+  formateym: formateym,
+};

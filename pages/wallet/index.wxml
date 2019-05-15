@@ -1,0 +1,17 @@
+<view class='part'>
+  <view class="money">0.00</view>
+  <view class='text'>我的余额（元）</view>
+  <view class='tixian'>提现</view>
+  <view class='money-detail'>钱包明细<i-icon type="enter" /></view>
+</view>
+
+<view class='list'>
+  <i-cell-group>
+    <i-cell i-class="item" title="入职返现" is-link>
+      <image class='icon' src='{{imgServerUrl}}/images/wallet/fanxian.png' slot="icon" mode='widthFix'></image>
+    </i-cell>
+    <i-cell i-class="item" title="推荐有奖" is-link url="../recommend/index">
+      <image class='icon' src='{{imgServerUrl}}/images/wallet/red-package.png' slot="icon" mode='widthFix'></image>
+    </i-cell>
+  </i-cell-group>
+</view>

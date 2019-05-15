@@ -1,0 +1,199 @@
+page{
+  font-size: 14px;
+}
+/* 搜索 */
+.search-box{
+  display: flex;
+  align-items: center;
+}
+.search{
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  height: 70rpx;
+  padding: 0 20rpx;
+  margin: 0 30rpx;
+  background:#f5f5f5;
+  border-radius: 35rpx;
+  line-height: 70rpx;
+  font-size: 28rpx;
+  color: #999;
+}
+.search-icon{
+  width: 40rpx;
+  height: 40rpx;
+}
+.search-input{
+  flex-grow: 1;
+  margin-left: 10rpx;
+  color: #333;
+}
+.search-box{
+  padding-left: 20rpx;
+  padding-right: 30rpx;
+}
+.panel{
+  margin: 34rpx 0 34rpx 30rpx;
+}
+/* 定位城市 */
+.location_city{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 28rpx;
+  margin: 0 25px 0 15px;
+}
+.location_city .btn{
+  width: 155rpx;
+	background-image: linear-gradient(90deg,#3ecafe 0%, #12a8ff 100%), linear-gradient(#f0f5f6, #f0f5f6);
+	background-blend-mode: normal, normal;
+  color:#fff;
+}
+.btn{
+  width: 147rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  text-align: center;
+  background: #f2f4f6;
+  color: #82838a;
+  border-radius: 32rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.btn.active{
+  background: #2db7f5;
+}
+.position{
+  font-size: 25rpx;
+  letter-spacing: 1px;
+	color: #28b0f9;
+}
+/* 热门城市 */
+.hot_city{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 28rpx;
+  margin: 0 25px 10px 15px;
+}
+.hot_city .btn{
+  margin-bottom: 30rpx;
+  margin-right: 20rpx;
+}
+/* 其他 */
+.dw{
+  position: absolute;
+  top:0;
+  right: 0;
+  width:100px;
+  height: 100%;
+}
+.wxSortPickerViewTag{
+  background-color: #f1f1f1;
+  font-size: 16px;
+  font-weight: bold;
+  color: #999999;
+  line-height: 30px;
+  height: 30px;
+  padding: 0 15px;
+}
+.wxSortPickerViewItem{
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #eee;
+  margin-left: 15px;
+  color: #444;
+}
+.hor{
+  font-size: 14px;
+  color: #999999;
+  font-weight: 500;
+  display: block;
+  padding: 14px 25px 5px 0px;
+}
+.kuai{
+  height: 30px;
+  width: 28%;
+  text-align: center;
+  line-height: 30px;
+  color: #444;
+  font-weight: 500;
+  display: inline-block;
+  margin: 10px 10px 0 0;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 2px;
+}
+.searchLetter{
+  position: fixed;
+  right: 0;
+  width: 20px;
+  height: 80%;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  color: #666;
+  z-index: 1
+}
+.searchLetter view{
+  height: 70rpx;
+}
+.touchClass{
+  top: 50px;
+  margin-top: 35px;
+  right: 0;
+  background-color: #fff;
+  color: #636363;
+  font-weight: 700;
+}
+.showSlectedLetter{
+  background-color: rgba(0, 0, 0,0.5);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top:50%;
+  left: 50%;
+  margin: -50px;
+  width: 100px;
+  height: 100px;
+  border-radius:10px;
+  font-size: 26px;
+  z-index: 1
+}
+.selection{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.item_letter{
+  display: flex;
+  background-color: #f8f8f8;
+  height: 30px;
+  padding-left: 10px;
+  align-items: center;
+}
+.item_city{
+  display: flex;
+  background-color: #fff;
+  height: 40px;
+  padding-left: 10px;
+  align-items: center;
+  border-bottom: 1px solid #f8f8f8
+}
+.gps{
+  position: relative;
+  height: 38px;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  line-height: 38px;
+  padding-left: 15px;
+  font-size: 16px;
+}
+.gpsif {
+  font-size: 14px;
+  color: #ccc;
+}

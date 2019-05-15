@@ -1,0 +1,30 @@
+<view class="list">
+  <view class='list-title'>1.工资单什么时间生成</view>
+  <view class='list-content'>每月中旬生成上月工资单</view>
+</view>
+
+<view class="list">
+  <view class='list-title'>2.哪些企业可以查询工资单</view>
+  <view class='list-content'></view>
+</view>
+
+<view class="list">
+  <view class='list-title'>3.为什么我所在的企业支持工资单查询但还是看不到我的工资单？</view>
+  <view class='list-content'>
+    <view class='row'>工资单查询需要确保您的身份证及手机号</view>
+    <view class='row'>与您在企业登记的信息一致。</view>
+    <view class='row'>如果无法查询：</view>
+    <view class='row'>①请确保您当前登录的账号，是您在厂内登记的</view>
+    <view class='row'>手机号；</view>
+    <view class='row'>②您可以咨询我们的客服，核实您的登记信息。</view>
+  </view>
+</view>
+
+<view class='tip'>
+  <view class='row'>温馨提示：</view>
+  <view class='row'>查询工资功能仅支持开心工作APP 、服务号、</view>
+  <view class='row'>微信小程序、订阅号。</view>
+  <view class='row'>如有疑问可致电开心工作官方电话：XXX</view>
+</view>
+
+<view class='copyright'>最终解释权归开心工作有限公司所有</view>

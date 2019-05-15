@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "i-button": "../../ui/button/index",
+    "i-input": "../../ui/input/index",
+    "i-count-down": "../../ui/count-down/index"
+  }
+}

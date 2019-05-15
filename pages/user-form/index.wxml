@@ -1,0 +1,47 @@
+<wxs src="../tools.wxs" module="globalTools" />
+<view class='group'>
+
+  <view class='list'>
+    <view class='list-title required'>姓名</view>
+    <view class='list-content'>
+      <view class='input-text'>{{realName}}</view>
+      <image class="auth" src="{{imgServerUrl}}/images/mine/auth-has.png" mode="widthFix" />
+    </view>
+  </view>
+
+  <view class='list'>
+    <view class='list-title required'>性别</view>
+    <view class='list-content'>
+      <view class='input-text'>{{gender==1?"男":"女"}}</view>
+    </view>
+  </view>
+
+  <view class='list'>
+    <view class='list-title required'>出生年月</view>
+    <view class='list-content'>
+      <view class='input-text'>{{bornYear}}</view>
+    </view>
+  </view>
+
+  <view class='list'>
+    <view class='list-title required'>手机号码</view>
+    <view class='list-content'>
+      <view class='input-box'>
+        <input value="{{ phone }}" type="number" maxlength="11" placeholder="请输入您现在的手机号" bindinput="inputPhone" bindfocus="showCode"/>
+        <button wx:if="{{isShowCode}}" bindtap="sendCode" class='label yzm'>{{ djs || '获取验证码'}}</button>
+      </view>
+    </view>
+  </view>
+
+   <view class='list' wx:if="{{isShowYzm}}">
+    <view class='list-title required'>验证码</view>
+    <view class='list-content'>
+      <view class='input-box'>
+        <input value="{{ yzm }}" type="number" maxlength="4" placeholder="请输入验证码" bindinput="inputYzm"/>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+<i-button i-class="radius distance" bind:click="save" type="info" shape="circle">保存</i-button>

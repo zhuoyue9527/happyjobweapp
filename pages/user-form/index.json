@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "个人信息",
+  "usingComponents": {
+    "i-button": "../../ui/button/index",
+    "i-input": "../../ui/input/index",
+    "i-icon": "../../ui/icon/index",
+    "i-radio-group": "../../ui/radio-group/index",
+    "i-radio": "../../ui/radio/index"
+  }
+}

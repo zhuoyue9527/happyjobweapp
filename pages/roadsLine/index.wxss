@@ -1,0 +1,6 @@
+page{
+  padding: 54rpx;
+  box-sizing: border-box;
+  font-size: 24rpx;
+  color: #323232;
+}

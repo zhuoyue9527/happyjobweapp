@@ -1,0 +1,70 @@
+page{
+  padding: 48rpx 44rpx 0;
+  box-sizing: border-box;
+  color: #7d7d7d;
+  border-top: 1px solid #f4f4f4;
+}
+.bd-bottom{
+  border-bottom: 1px solid #eaeaea;
+}
+.row .self{
+  position: static;
+}
+.group{
+  display: flex;
+  padding:7px 15px;
+  color:#495060;
+  font-size: 14px;
+}
+.group .label{
+  flex: 0 0 atuo;
+  color:#495060;
+  min-width:65px;
+  padding-right:10px;
+}
+.select{
+  position: relative;
+  padding: 2px 20px 2px 4px;
+  border: 1px solid #ddd;
+}
+.select-arrow{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.table-container{
+  padding: 15px;
+}
+.table{
+  display: table;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 24rpx;
+  border-collapse:collapse;
+}
+.table-tr{
+  display: table-row;
+}
+.table-td{
+  display: table-cell;
+  max-width: 25%;
+  min-width: 100rpx;
+  border: 1px solid #ddd;
+  vertical-align: middle;
+  padding:10rpx 10rpx;
+}
+.remarks{
+  text-align: center;
+  font-size: 28rpx;
+  margin: 40rpx;
+}
+.nullpage{
+  margin: 50rpx 0;
+  color: #7d7d7d;
+  letter-spacing: 2px;
+  font-size: 30rpx;
+  text-align:center;
+}
+.nullpage .row{
+  margin-bottom: 18rpx;
+}

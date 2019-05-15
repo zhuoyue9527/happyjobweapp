@@ -1,0 +1,93 @@
+<wxs src="../tools.wxs" module="globalTools" />
+
+<view class='app-header'>
+  <view class='map' bindtap='toCity'>
+    <i-icon type="coordinates_fill" />
+    <text>{{cityName}}</text>
+    <i-icon class="arrow-down" type="play_fill" />
+  </view>
+  <view class='search' bindtap='toSearch'>
+    <i-icon type="search" />
+    <text class='search-input'>请输入您要找的职位、企业名</text>
+  </view>
+</view>
+
+<!-- 轮播 -->
+<view class="">
+  <swiper indicator-dots="true" autoplay="true" interval="3000" duration="500" circular="true" indicator-active-color="#fff" style="height:{{swiperH}}px">
+    <block wx:for="{{imgList}}" wx:key="picUrl">
+      <swiper-item>
+        <navigator url='/pages/web-view/web-view?url={{item.targetUrl}}'>
+          <image src="{{item.picUrl}}" class="slide-image" mode='widthFix' bindload='imageLoad'/>
+        </navigator>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<view class="activity-box">
+  <view class="activity">
+    <block wx:for="{{activity}}" wx:key="text">
+      <view class="activity-item" bindtap='changeList' data-index="{{index}}" hover-class="item-hover">
+        <image src="{{item.src}}" mode="scaleToFill"></image>
+        <text>{{item.text}}</text>
+      </view>
+    </block>
+
+    <block wx:if="{{isTest}}" >
+      <view class="activity-item" bindtap='goTestUrl' >
+        <image src="" mode="scaleToFill"></image>
+        <text>测试按钮</text>
+      </view>
+    </block>
+  </view>
+</view>
+
+<!-- <i-notice-bar icon="systemprompt" loop>
+    2018年世界杯,将于6月14日至7月15日举行;2018年世界杯,将于6月14日至7月15日举行;
+</i-notice-bar> -->
+
+<view class='box-body'>
+  <view class='box-item' wx:for="{{list}}" wx:key="hpPositionId" bindtap='toDetail' data-id="{{item.hpPositionId}}" data-type="{{item.groupOn}}" data-welfare="{{item.welfareOn}}" hover-class="item-hover">
+    
+    <view class='box-item-info'>
+      <view class='one'>
+        <view class='left'>
+          <text class='job'>{{item.posName}}</text>
+          <view class='fan' wx:if="{{item.retManMoney||item.urgentMoney}}">
+            返<text wx:if="{{item.retManMoney}}">{{item.retManMoney}}</text>
+            <text wx:if="{{item.retManMoney&&item.urgentMoney}}">+</text>
+            <text wx:if="{{item.urgentMoney}}">{{item.urgentMoney}}</text>元
+          </view>
+        </view>
+        <view class='salary' wx:if="{{item.hpPositionSalaryId==-1}}">不限</view>
+        <view class='salary' wx:elif="{{item.hpPositionSalaryId == 0 }}">面议</view>        
+        <view class='salary' wx:else>{{item.lowerNum}}-{{item.hightNum}} <text class="danwei">元</text></view>
+      </view>
+      <view class='two'>
+        <view class='commpany'>{{item.comName}}</view>
+        <view class='area'>
+          <i-icon type="coordinates_fill" />
+          <text class='area-name'>{{item.cityName}}-{{item.countyName}}</text>
+        </view>
+      </view>
+      <view class='three'>
+        <view class='limit'>
+          <block wx:if="{{item.welfareArr}}">
+            <i-tag 
+              wx:for="{{globalTools.splitStr(item.welfareArr,',')}}" 
+              wx:key="*this"
+              wx:for-item="tag"
+              i-class="tag-class"
+              >
+              {{tag}}
+            </i-tag>
+          </block>
+        </view>
+        <view class='time'>{{globalTools.formatemd(item.startTime*1000)}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<button id="kefu" open-type="contact" bindcontact="handleContact" hover-class='kefu-hover'></button>

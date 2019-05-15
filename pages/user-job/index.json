@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "添加求职意向",
+  "usingComponents": {
+    "i-button": "../../ui/button/index",
+    "i-input": "../../ui/input/index"
+  }
+}

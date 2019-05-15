@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "i-icon": "../../ui/icon/index",
+    "i-notice-bar": "../../ui/notice-bar/index",
+    "i-tag": "../../ui/tag/index"
+  }
+}

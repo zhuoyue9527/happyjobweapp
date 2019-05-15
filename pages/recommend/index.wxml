@@ -1,0 +1,24 @@
+<view class="top-bg">
+    <!-- <image class="award-title" src="{{imgServerUrl}}/images/recommend/title.png" mode="widthFix" />
+    <view class="desc">
+        <view >每邀请1位新用户注册</view>
+        <view >即可得5元现金红包</view>
+    </view> -->
+    <image class='awardBg' src='{{imgServerUrl}}/images/recommend/awardBg.png' mode='widthFix'></image>
+</view>
+
+<i-notice-bar icon="systemprompt" loop background-color="#ffc" color="#169bd5" wx:if="{{false}}">
+  <text style='color:#333'>恭喜XXX邀请2名好友，获得<text style='color:red'>10</text>元红包</text>
+</i-notice-bar>
+
+<view class='box'>
+    <image class="card" src="{{imgServerUrl}}/images/recommend/step.png" mode="widthFix"/>
+    <view class='explain'>本活动最终解释权归开心工作</view>
+    <view class='btn-group'>
+        <button class="share" open-type='share'>立即邀请</button>
+        <button class="create" bindtap='toShare'>生成分享图片</button>
+    </view>
+
+
+</view>
+

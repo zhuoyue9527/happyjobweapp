@@ -1,0 +1,148 @@
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+.card.mgT70 {
+  margin-top: 70rpx;
+}
+.card {
+  margin: 47rpx 30rpx;
+  border: 1px solid #eaeaea;
+  margin-bottom: 20px;
+  box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.13);
+  border-radius: 14px;
+  padding-left: 40rpx;
+  box-sizing: border-box;
+  font-size: #323232;
+  background: #fff;
+}
+.card-hd {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 14px;
+  border-bottom: 1px solid #eaeaea;
+  padding: 30rpx 40rpx 30rpx 0;
+  box-sizing: border-box;
+}
+.noBorder {
+  border: none;
+}
+.card-hd-title {
+  display: flex;
+  align-items: center;
+}
+.card-hd-title .icon {
+  margin-right: 20rpx;
+}
+.icon {
+  width: 20px;
+}
+.extra {
+  float: right;
+}
+.card-bd {
+  padding: 20rpx;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+.input-padding {
+  padding: 35rpx 35rpx 35rpx 0;
+}
+.input {
+  height: 75rpx;
+  line-height: 75rpx;
+  padding: 0 20rpx;
+  border: 1px solid #e2e2e2;
+  color: #909090;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+.row {
+  padding: 4px 0;
+}
+.qiuzhi {
+  margin-left: 40rpx;
+  border-bottom: 1px solid #eaeaea;
+}
+.qiuzhi .row {
+  margin-bottom: 30rpx;
+}
+.qiuzhi .row:last-child {
+  margin-bottom: 10rpx;
+}
+.qiuzhi .row .label {
+  color: #909090;
+  margin-right: 30rpx;
+}
+.padLeft {
+  margin-left: -40rpx;
+}
+.strong {
+  color: #333;
+}
+.flex {
+  display: flex;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.align-center {
+  align-items: center;
+}
+.icon-edit {
+  width: 36rpx;
+}
+.icon-box {
+  width: 20px;
+  margin-right: 20rpx;
+}
+.icon-sex {
+  width: 27rpx;
+  margin-left: 20rpx;
+}
+.contact {
+  margin-bottom: 10rpx;
+}
+.icon-iphone {
+  width: 18rpx;
+  margin-right: 10rpx;
+}
+.icon-email {
+  width: 27rpx;
+  margin-right: 10rpx;
+}
+.avatar {
+  width: 84rpx;
+  height: 84rpx;
+  margin-right: 40rpx;
+  border-radius: 50%;
+}
+.name {
+  font-size: 30rpx;
+  color: #323232;
+  margin-bottom: 10rpx;
+}
+.tag {
+  padding: 0 20rpx;
+  background: #f8f8f8;
+  color: #909090;
+  font-size: 22rpx;
+  margin-right: 20rpx;
+  border-radius: 4rpx;
+}
+.person-panel {
+  padding: 30rpx 20rpx 30rpx 0;
+}
+.email {
+  margin-right: 30rpx;
+}
+.size10 {
+  font-size: 20rpx;
+}
+.color90 {
+  color: #909090;
+}

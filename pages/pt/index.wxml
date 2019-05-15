@@ -1,0 +1,89 @@
+<wxs src="../tools.wxs" module="globalTools" />
+
+<!-- 轮播 -->
+<image src="{{imgServerUrl}}/images/pt/pt-banner.jpg" class="slide-image" mode='widthFix'/>
+  <!-- <view class="">
+  <swiper indicator-dots="false" autoplay="false" interval="3000" duration="500" circular="true" indicator-active-color="#fff" style="height:{{swiperH}}px">
+    <block wx:for="{{1}}">
+      <swiper-item>
+        <image src="{{imgServerUrl}}/images/pt/pt-banner.jpg" class="slide-image" mode='widthFix' bindload="imageLoad"/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view> -->
+
+<view class='box-body {{myList.length?"mg190":""}}' bindtap='toOrderDetail' data-orderid="{{list.ygfOrderId}}">
+  <view class='box-item fixedH' wx:for="{{list}}" wx:key="hpPositionId" bindtap='toDetail' data-id="{{item.hpPositionId}}" data-type="{{item.groupOn}}"  data-welfare="{{item.welfareOn}}" hover-class="item-hover">
+    
+    <view class='box-item-info'>
+      <view class='one'>
+        <view class='left'>
+          <text class='job'>{{item.posName}}</text>
+          <text class='fan' wx:if="{{item.retManMoney}}">返{{item.retManMoney}}元</text>
+          <text class='fan' wx:if="{{item.fiveMoney }}">拼团多返{{item.fiveMoney}}元</text>
+        </view>
+        <view class='salary' wx:if="{{item.hpPositionSalaryId==-1}}">不限</view>
+        <view class='salary' wx:elif="{{item.hpPositionSalaryId == 0 }}">面议</view>        
+        <view class='salary' wx:else>{{item.lowerNum}}-{{item.hightNum}} <text class="danwei">元</text></view>
+      </view>
+      <view class='two'>
+        <view class='commpany'>{{item.comName}}</view>
+        <view class='area'>
+          <i-icon type="coordinates_fill" />
+          <text class='area-name'>{{item.cityName}}-{{item.countyName}}</text>
+        </view>
+      </view>
+      <view class='three'>
+        <view class='limit'>
+          <block wx:if="{{item.welfareArr}}">
+            <i-tag 
+              wx:for="{{globalTools.splitStr(item.welfareArr,',')}}" 
+              wx:key="*this"
+              wx:for-item="tag"
+              i-class="tag-class"
+              >
+              {{tag}}
+            </i-tag>
+          </block>
+        </view>
+        <view class='time'>{{globalTools.formatemd(item.startTime*1000)}}</view>
+      </view>
+      <view class="four">
+        <text class="pt-member">已有<text class="number">{{item.groupSccNum}}</text>人拼团成功</text>
+        <text class="endtime">结束时间：{{item.endTime}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='myPT'>
+  <view class="box" wx:for="{{myList}}" wx:key="hpPositionId" bindtap='toApplyList'>
+    <view class='box-body'>
+      <view class='box-item'>
+        <image class='box-item-img' src='{{item.leaderPic}}' mode='aspectFit'></image>
+        <view class='box-item-info'>
+          <view class='one'><text class='job'>{{item.posName}}</text><text class='componey'>{{item.comName}}</text></view>
+          <view class='three' wx:if="{{!djsEnd}}">
+            <view class='limit' wx:if="{{(3-item.groupPartNum)>0}}">还差<text class='number'>{{3-item.groupPartNum}}</text>人成团</view>
+            <view class='limit' wx:elif="{{ item.groupPartNum<5 }}">已成3人团，可继续拼5人团</view>
+            <view class='limit' wx:else>已成5人团，可继续拼团</view>
+            <view class='djs'>
+              <text>剩余</text>
+              <i-count-down
+                target="{{item.groupLeftTime}}"
+                bindcallback="myLinsterner"
+                clear-timer="{{clearTimer}}"
+                format="{{myFormat}}"
+                show-day="{{true}}"
+              ></i-count-down>
+            </view>
+          </view>
+          <view class='three' wx:if="{{djsEnd}}">
+            <view class='limit'></view>
+            <view class='djs'>拼团成功</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

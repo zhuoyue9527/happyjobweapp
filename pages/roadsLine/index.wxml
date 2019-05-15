@@ -1,0 +1,5 @@
+<wxs src="../tools.wxs" module="globalTools" />
+<import src="../../plugins/wxParse/wxParse.wxml"/>
+<view class="info-box" id="carDesc">
+    <template is="wxParse" data="{{wxParseData:carDesc.nodes}}"/>
+</view>

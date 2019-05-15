@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "参团详情",
+  "usingComponents": {
+    "i-button": "../../ui/button/index",
+    "i-input": "../../ui/input/index",
+    "i-count-down": "../../ui/count-down/index"
+  }
+}

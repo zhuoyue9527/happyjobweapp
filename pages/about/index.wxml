@@ -1,0 +1,14 @@
+<view class="container">
+  <view class='logoBox'><image class="logo" src='{{imgServerUrl}}/images/recommend/logo.png' mode='widthFix'></image></view>
+  <view class='desc'>
+    <view class='row'>开心工作是由无锡开心工作网络有限公司，隶属于慧嘉博集团，公司以打造的中国一流的综合性求职服务网络平台以及手机应用。</view>
+    <view class='row'>我们服务区域以长三角为中心辐射全国，提供优质的服务，让求职者与企业精准的对接，同时为向不同层次的求职者提供全方位的求职务，提供最全，最新，最准确的职业培训、全职招聘、劳动咨询等信息。</view>
+  </view>
+
+  <view class='shows'>
+    <image class='pic pic1' src='{{imgServerUrl}}/images/about/1.png' mode='scaleToFill'></image>
+    <image class='pic pic2' src='{{imgServerUrl}}/images/about/2.png' mode='scaleToFill'></image>
+    <image class='pic pic3' src='{{imgServerUrl}}/images/about/3.png' mode='scaleToFill'></image>
+    <image class='pic pic4' src='{{imgServerUrl}}/images/about/4.png' mode='scaleToFill'></image>
+  </view>
+</view>

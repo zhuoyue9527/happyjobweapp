@@ -1,0 +1,22 @@
+
+.noborder::after{
+    border: 0!important;
+}
+.radius{
+    border-radius: 8px!important;
+} 
+.distance{
+    margin: 0 30px!important;
+    box-sizing: border-box;
+}
+.primary{
+  background: #2278a8!important;
+}
+i-count-down{
+    display: inline-block;
+}
+.text-overflow{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

@@ -1,0 +1,17 @@
+<view class="banner">
+    <image class="banner-img" src="{{imgServerUrl}}/images/store/storeBanner.png" mode="widthFix"/>
+</view>
+
+<view class="list" >
+    <view class="li" wx:for="{{list}}" wx:key="hpCompanyStoreId" bindtap='toDetail' data-id="{{item.hpCompanyStoreId}}"  >
+        <image class="pic" src="{{item.storePic}}" />
+        <view class="info">
+            <view class="name">{{item.storeName}}</view>
+            <view class="address">{{item.storeAddr}}</view>
+            <view class="phone">
+                <image class="phone-icon"  src="{{imgServerUrl}}/images/store/icon-phone.png"/>
+                <text class="phone-number" wx:if='{{item.contactNum}}'>{{item.contactNum}}</text>
+            </view>
+        </view>
+    </view>
+</view>

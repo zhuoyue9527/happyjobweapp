@@ -1,0 +1,50 @@
+
+<view class="page">
+  <view class='title'>
+    <image class='icon-box' src='{{imgServerUrl}}/images/jianli/icon-box.png' mode='widthFix'></image>
+    <text class='card-title'>工作经验</text>
+  </view>
+
+  <view class='group'>
+
+    <view class='list'>
+      <view class='list-title'>公司名称</view>
+      <view class='list-content border'>
+        <i-input class="row" value="{{ comName }}" placeholder="请输入公司名" maxlength='50' i-class="input" bind:change="changeComName"/>
+      </view>
+    </view>
+
+    <view class='list'>
+      <view class='list-title'>工作职位</view>
+      <view class='list-content border'>
+        <i-input class="row" value="{{ jobName }}" placeholder="请输入职位名" maxlength='50' i-class="input" bind:change="changeJobName"/>
+      </view>
+    </view>
+
+    <view class='list'>
+      <view class='list-title'>入职时间</view>
+      <view class='list-content border'>
+        <picker bindchange="startDateChange" mode="date" value="{{startDate}}" fields="month" end="{{startDateEnd}}">
+          <view class="picker">
+            {{startDate}}
+          </view>
+        </picker>
+      </view>
+    </view>
+
+    <view class='list'>
+      <view class='list-title'>离职时间</view>
+      <view class='list-content border'>
+        <picker bindchange="endDateChange" mode="date" value="{{endDate}}" fields="month">
+          <view class="picker">
+            {{endDate}}
+          </view>
+        </picker>
+      </view>
+    </view>
+
+  </view>
+
+  <i-button i-class="radius distance" bind:click="submit" type="primary" shape="circle">保存</i-button>
+
+</view>

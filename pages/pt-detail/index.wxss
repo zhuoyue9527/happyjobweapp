@@ -1,0 +1,169 @@
+.panel {
+  position: relative;
+  padding: 0 30rpx 80rpx;
+  background: url('https://weapp.hap-job.com/uploadFiles/images/detail/detail-bg.jpg') no-repeat;
+  background-size: 100% 100%;
+  border-bottom: 1px solid #fff;
+}
+.panel .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.panel .row {
+  display: flex;
+  margin-bottom: 40rpx;
+}
+.panel .job {
+  color: #fff;
+  padding-top: 90rpx;
+  font-size: 38rpx;
+  letter-spacing: 4rpx;
+}
+.panel .auth {
+  width: 150rpx;
+  margin-left: 10rpx;
+}
+.panel .award-info {
+  padding: 4rpx 15rpx;
+  margin-left: 10rpx;
+  color: #6a9fe8;
+  font-size: 28rpx;
+}
+.panel .money {
+  font-size: 33rpx;
+  color: #58a8ff;
+  font-weight: 700;
+}
+.panel .rule {
+  margin-left: 100rpx;
+  height: 40rpx;
+  line-height: 36rpx;
+  color: #bdbaba;
+  font-size: 22rpx;
+  padding: 0 10rpx;
+  border-radius: 10rpx;
+  border: 2rpx solid #bdbaba;
+  box-sizing: border-box;
+}
+.panel .pt-award {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff5e1;
+  color: #3c3c3c;
+  font-size: 28rpx;
+  padding: 10rpx 20rpx;
+}
+.panel .pt-award .num {
+  font-size: 30rpx;
+  font-weight: 700;
+}
+.panel .pt-award .toTuan {
+  padding: 0 15rpx;
+  height: 40rpx;
+  text-align: center;
+  background-image: linear-gradient(87deg, #ffc466 0%, #f94f28 100%), linear-gradient(#36a0db, #36a0db);
+  border-radius: 10rpx;
+  color: #fff;
+}
+page {
+  background: #fefefe;
+  padding-bottom: 50rpx;
+}
+.card {
+  position: relative;
+  border-radius: 10rpx;
+  margin: 0 20rpx 0;
+  padding: 0 40rpx;
+  background-color: #ffffff;
+  box-shadow: 0px 12px 59px 3px rgba(0, 0, 0, 0.09);
+  border-radius: 16rpx;
+  border: solid 1px #f1f1f1;
+  z-index: 2;
+}
+.card.top1 {
+  margin-top: -100rpx;
+}
+.card-title {
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  padding: 30rpx 0;
+}
+.card-title-icon {
+  width: 55rpx;
+  margin-right: 10rpx;
+}
+.card-content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #eee;
+}
+.card-content .avatar-box {
+  flex: 0 0 auto;
+  text-align: center;
+  width: 25%;
+}
+.card-content .avatar-box .avatar {
+  background-color: #f1f1f1;
+  border-radius: 50%;
+  border: 1px solid #e2e2e1;
+  overflow: hidden;
+  height: 102rpx;
+  width: 102rpx;
+}
+.card-content .avatar-box .avatar .avatar-img {
+  width: 100%;
+  height: 100%;
+}
+.card .card-footer {
+  text-align: center;
+  padding-bottom: 30rpx;
+  font-size: 24rpx;
+  color: #58a8ff;
+}
+.djs {
+  display: inline-block;
+}
+.btn-group {
+  margin: 60rpx!important;
+}
+.btn-group .primay {
+  background: #007aac!important;
+}
+.btn-group .info {
+  background: #37a0db!important;
+}
+.desc {
+  font-size: 24rpx;
+  color: #6b6b6b;
+  line-height: 52rpx;
+}
+.selfBtn {
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  white-space: nowrap;
+  user-select: none;
+  font-size: 14px;
+  border: 0!important;
+  position: relative;
+  text-decoration: none;
+  height: 44px;
+  line-height: 44px;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+  color: #495060!important;
+  margin: 10px;
+  color: #fff!important;
+  background: #2d8cf0!important;
+  border-radius: 44px;
+}

@@ -1,0 +1,90 @@
+page {
+  background: #f4f4f4;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30rpx;
+  height: 80rpx;
+  line-height: 90rpx;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 177rpx;
+  text-align: center;
+}
+.logo {
+  width: 184rpx;
+  margin-bottom: 100rpx;
+}
+.input {
+  width: 603rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: #ffffff;
+  border-radius: 21rpx;
+  padding: 0!important;
+}
+.submit {
+  width: 603rpx;
+  height: 90rpx;
+  background-color: #36a0db;
+  border-radius: 20rpx;
+  border: solid 1px #e2e2e1;
+  color: #fff;
+  margin-top: 50rpx;
+}
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.45);
+}
+.tip-box {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+}
+.tip-box .topbg {
+  width: 542rpx;
+}
+.tip-box .tip-box-body {
+  padding: 55rpx 0 64rpx;
+  color: #323232;
+  line-height: 53rpx;
+  letter-spacing: 2rpx;
+  font-size: 30rpx;
+  text-align: center;
+}
+.tip-box .tip-btn {
+  width: 190rpx;
+  height: 60rpx;
+  margin-top: 50rpx;
+  background-color: #17a9ff;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+  color: #fff;
+  letter-spacing: 2rpx;
+}
+.tip-box .tip-btn.back {
+  background-color: #ff3615;
+}
+.input-view {
+  display: flex;
+  align-items: center;
+  line-height: 1.4;
+  font-size: 14px;
+  overflow: hidden;
+  width: 603rpx;
+  height: 90rpx;
+  border-radius: 21rpx;
+  margin: 10px 15px;
+  background-color: #fff;
+  color: #495060;
+}

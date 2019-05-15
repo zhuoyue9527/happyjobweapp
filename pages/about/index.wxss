@@ -1,0 +1,53 @@
+.container{
+  padding: 63rpx 95rpx 0;
+  color: #333;
+  font-size: 28rpx;
+  box-sizing: border-box;
+}
+.logoBox{
+  text-align: center;
+  margin-bottom: 41rpx;
+}
+.logo{
+  width: 184rpx;
+}
+.title{
+  font-size: 20rpx;
+  line-height: 32rpx;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+.desc{
+  margin-bottom: 54rpx;
+}
+.row{
+  text-indent: 2em;
+  line-height: 38rpx;
+}
+.shows{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 557rpx;
+}
+.pic{
+  display: inline-block;
+  font-size: 0;
+  margin-bottom: 14rpx;
+}
+.pic1{
+  width: 232rpx;
+  height: 230rpx;
+}
+.pic2{
+  width: 322rpx;
+  height: 230rpx;
+}
+.pic3{
+  width: 273rpx;
+  height: 186rpx;
+}
+.pic4{
+  width: 273rpx;
+  height: 186rpx;
+}

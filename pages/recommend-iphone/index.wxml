@@ -1,0 +1,29 @@
+<view class="header">
+    <i-icon type="return" size="23" bindtap="goBack"/>
+    <i-icon type="homepage" size="23" bindtap="goHome"/>
+</view>
+<view class="box">
+    <image class="logo" src="{{imgServerUrl}}/images/recommend/logo.png" mode="widthFix"/>
+    <i-input wx:if="{{errorFlag==0}}" value="{{ phoneNo }}" placeholder="请输入您的的手机号" i-class="input" maxlength="11" bind:change='bindPhoneBlur' type='number' />
+    <view wx:else class="input-view">{{phoneNo}}</view>
+    <button class="submit" bind:tap="dataSub" >确认</button>
+</view>
+
+<view class="mask" wx:if="{{errorFlag!=0}}">
+    <view class="tip-box" wx:if="{{errorFlag==1}}">
+        <image class="topbg" src="{{imgServerUrl}}/images/recommend/success.png" mode="widthFix"/>
+        <view class="tip-box-body">
+            <view class="p">恭喜您</view>
+            <view class="p">赶快叫好友下载注册 写个简历吧</view>
+            <button class="tip-btn sure" bind:tap='bindSuccessTap' >确认</button>
+        </view>
+    </view>
+    <view class="tip-box" wx:else>
+        <image class="topbg" src="{{imgServerUrl}}/images/recommend/error.png" mode="widthFix"/>
+        <view class="tip-box-body">
+            <view class="p">您注册过咯</view>
+            <view class="p">分享给好友 才能继续领红包</view>
+            <button class="tip-btn back"  bind:tap='bindFailTap' >返回</button>
+        </view>
+    </view>
+</view>

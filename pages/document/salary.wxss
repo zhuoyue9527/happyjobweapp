@@ -1,0 +1,33 @@
+page{
+  padding: 60rpx 63rpx 0 84rpx;
+  border-top: 1px solid #eaeaea;
+  box-sizing: border-box;
+}
+.list{
+  padding: 30rpx 0;
+  border-bottom: 1px solid rgba(0,0,0,.2)
+}
+.list-title{
+  font-size: 30rpx;
+  color: #2e2e2e;
+  line-height: 53rpx;
+}
+.list-content{
+  color: #7d7d7d;
+  font-size: 24rpx;
+  line-height: 54rpx;
+  min-height: 20rpx;
+}
+.tip{
+  margin-top: 30rpx;
+  margin-bottom: 36rpx;
+  font-size: 26rpx;
+	line-height: 35rpx;
+	letter-spacing: 2rpx;
+	color: #2e2e2e;
+}
+.copyright{
+  font-size: 22rpx;
+  line-height: 31rpx;
+  color: #36a0db;
+}

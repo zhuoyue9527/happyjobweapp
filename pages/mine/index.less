@@ -1,0 +1,85 @@
+@import "../config";
+page{
+    font-size: 14px;
+    color:#333;
+}
+.panel-container{
+    position: relative;
+}
+.panel{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40rpx 0;
+    font-size: 28rpx;
+    z-index: 3;
+    border-top: 1px solid #eaeaea;
+    .avatar{
+        width: 140rpx;
+        height: 140rpx;
+        flex: 0 0 auto;
+        border-radius: 50%;
+    }
+    .person-info{
+        .name{
+            font-size: 44rpx;
+            font-weight: 700;
+            color:#333;
+        }
+        .enter{
+            font-size: 28rpx;
+            color: #999;
+            margin-top: 10rpx;
+        }
+    }
+    .auth{
+        width: 78rpx;
+        margin-left: 30rpx;
+    }
+    .enter{
+        .edit{
+            margin-left: 20rpx;
+            width: 90rpx;
+        }
+    }
+    .qycode{
+        width:50rpx;
+    }
+}
+/* banner */
+.banner-img{
+    width: 100%;
+}
+/*  简历 */
+.jian-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10rpx 40rpx;
+    box-sizing: border-box;
+    border-bottom: 20rpx solid #f5f5f5;
+    border-top: 10rpx solid #f5f5f5;
+    .jianli-pic{
+        width: 180rpx;
+    }
+    .jianli-title{
+        font-size: 14px;
+        font-weight: 700;
+    }
+    .jianli-desc{
+        margin-top: 20rpx;
+        color: #999;
+        font-size: 12px;
+    }
+    .edit-jianli{
+        width: 200rpx;
+    }
+}
+/* list */
+.list .item{
+    padding:7px 15px;
+}
+.item-icon{
+    width: 30rpx;
+    margin-right: 20rpx;
+}

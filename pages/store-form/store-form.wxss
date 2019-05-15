@@ -1,0 +1,51 @@
+page {
+  border-top: 2px solid #f4f4f4;
+}
+.title {
+  text-align: center;
+  color: #2e2e2e;
+  letter-spacing: 2rpx;
+  font-size: 30rpx;
+  margin-top: 40rpx;
+  margin-bottom: 50rpx;
+}
+.form {
+  padding-left: 60rpx;
+  padding-right: 100rpx;
+  box-sizing: border-box;
+}
+.input-box {
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+  margin-bottom: 30rpx;
+}
+.input-box .label {
+  width: 170rpx;
+  text-align: center;
+  color: #7d7d7d;
+}
+.input-box .input-border {
+  border: 1px solid #b7b7b7;
+  width: 418rpx;
+  height: 60rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.submit {
+  position: fixed;
+  bottom: 60rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 603rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: #36a0db;
+  border-radius: 21rpx;
+  color: #fff;
+  font-size: 30rpx;
+}
+.label.required::before {
+  content: "*";
+  color: red;
+}

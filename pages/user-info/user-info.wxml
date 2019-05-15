@@ -1,0 +1,68 @@
+<view class="page">
+  <view class='title'>
+    <image class='icon-box' src='{{imgServerUrl}}/images/jianli/icon-box.png' mode='widthFix'></image>
+    <text class='card-title'>基本信息</text>
+  </view>
+
+  <view class='group'>
+
+    <view class='list'>
+      <view class='list-title required'>头像</view>
+      <view class='list-content'>
+        <view class='extra'>
+          <image class='avatar' src='{{avatar}}' bindtap='changeImg'></image>
+          <i-icon type='enter' size='28' color='#999'/>
+        </view>
+      </view>
+    </view>
+
+    <view class='list'>
+      <view class='list-title required'>姓名</view>
+      <view class='list-content border'>
+        <i-input class="row" value="{{ name }}" placeholder="请输入姓名" i-class="input" maxlength='10' bind:change="changeName"/>
+      </view>
+    </view>
+
+    <view class='list'>
+      <view class='list-title required'>性别</view>
+      <view class='list-content border'>
+        <picker bindchange="bindSexChange" value="{{sex_index}}" range="{{sex}}">
+          <view class="picker">
+            {{sex[sex_index]}}
+          </view>
+        </picker>
+      </view>
+    </view>
+
+    <view class='list'>
+      <view class='list-title required'>出生年份</view>
+      <view class='list-content border'>
+        <picker mode="date" fields="year"  value="{{year}}"  end="{{endDate}}" start="1900" bindchange="changeYear">
+          <view class='picker-full'>{{year}}</view>
+        </picker>
+      </view>
+    </view>
+
+    <view class='list'>
+      <view class='list-title required'>手机号码</view>
+      <view class='list-content border'>
+        <i-input value="{{ iphone }}" type="number" maxlength="11" placeholder="请输入手机号" i-class="input" bind:change="changeIphone"/>
+      </view>
+    </view>
+
+    <view class='list'>
+      <view class='list-title required'>学历</view>
+      <view class='list-content border'>
+        <picker bindchange="bindPickerChange" value="{{eduIndex}}" range="{{eduList}}" range-key="eduName">
+          <view class="picker">
+            {{eduList[eduIndex].eduName}}
+          </view>
+        </picker>
+      </view>
+    </view>
+
+  </view>
+
+  <i-button i-class="radius distance" bind:click="submit" type="primary" shape="circle">保存</i-button>
+
+</view>

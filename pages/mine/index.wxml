@@ -1,0 +1,52 @@
+<view class='panel-container'>
+  <view class="panel" bindtap="toAuth">
+    <image class='avatar' src='{{headerPic}}'></image>
+    <view class='person-info'>
+        <view class='name'>
+          <text class="">{{userName}}</text>
+          <image class="auth" wx:if="{{approveState==1}}" src="{{imgServerUrl}}/images/mine/auth-has.png" mode="widthFix" />
+          <image class="auth" wx:if="{{approveState!=1}}" src="{{imgServerUrl}}/images/mine/auth.png" mode="widthFix" />
+          
+        </view>    
+        <view class="enter">
+          <text class="">进入个人主页</text>
+          <image class="edit" src="{{imgServerUrl}}/images/mine/edit.jpg" mode="widthFix" bindtap="toform"/>
+        </view>
+    </view>
+   <image class="qycode" src="{{imgServerUrl}}/images/mine/qycode.jpg" mode="widthFix" />
+   <i-icon type="enter" size="24" color="#ddd"/>
+  </view>
+</view>
+
+<view class="banner">
+  <image class='banner-img' src='{{imgServerUrl}}/images/mine/banner.png'  mode="widthFix"></image>
+</view>
+
+<view class="jian-box">
+  <image class="jianli-pic" src="{{imgServerUrl}}/images/mine/jianli_pic.jpg" mode="widthFix" />
+  <view class="jianli-info">
+    <view class="jianli-title">我的简历</view>
+    <view class="jianli-desc">完善简历提高您的录取率</view>
+  </view>
+  <image class="edit-jianli" src="{{imgServerUrl}}/images/mine/jianli.png" mode="widthFix" bindtap='tojianli'/>
+</view>
+
+<view class='list'>
+  <i-cell-group>
+    <i-cell i-class="item" title="我的钱包" is-link url="../wallet/index">
+      <image class="item-icon" src="{{imgServerUrl}}/images/mine/money.png" mode="widthFix" slot="icon" />
+    </i-cell>
+    <i-cell i-class="item" title="推荐有奖" is-link url="../recommend/index">
+      <image class="item-icon" src="{{imgServerUrl}}/images/mine/tuijian.png" mode="widthFix" slot="icon" />
+    </i-cell>
+    <i-cell i-class="item" title="薪资查询" is-link url="../check-iphone/index?approveState={{approveState}}">
+      <image class="item-icon" src="{{imgServerUrl}}/images/mine/salary.png" mode="widthFix" slot="icon" />
+    </i-cell>
+    <i-cell i-class="item" title="我的申请" is-link url="../apply-list/index">
+      <image class="item-icon" src="{{imgServerUrl}}/images/mine/apply.png" mode="widthFix" slot="icon" />
+    </i-cell>
+    <i-cell i-class="item" title="关于我们" is-link url="../about/index">
+      <image class="item-icon" src="{{imgServerUrl}}/images/mine/about.png" mode="widthFix" slot="icon" />
+    </i-cell>
+  </i-cell-group>
+</view>

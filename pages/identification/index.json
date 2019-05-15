@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "身份认证",
+  "usingComponents": {
+    "i-button": "../../ui/button/index",
+    "i-input": "../../ui/input/index"
+  }
+}

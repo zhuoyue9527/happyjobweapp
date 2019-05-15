@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "添加工作经历",
+  "usingComponents": {
+    "i-button": "../../ui/button/index",
+    "i-input": "../../ui/input/index"
+  }
+}

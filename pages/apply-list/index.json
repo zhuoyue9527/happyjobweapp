@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "i-icon": "../../ui/icon/index",
+    "i-divider": "../../ui/divider/index"
+  }
+}

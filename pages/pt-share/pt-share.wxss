@@ -1,0 +1,134 @@
+page{
+    position: relative;
+    background: #f4f4f4;
+    padding: 20rpx 25rpx 0;
+    box-sizing: border-box;
+}
+/* .banner-img{
+    width: 700rpx;
+    height: 220rpx;
+} */
+.container{
+    width: 700rpx;
+    height: 950rpx;
+    margin-bottom: 65rpx;
+}
+.canvas-bg{
+    position: absolute;
+    top: 20rpx;
+    left: 25rpx;
+    width: 700rpx;
+    height: 950rpx;
+}
+.bg{
+    width:700rpx;
+    height:730rpx;
+    color: #fff;
+    font-size: 30rpx;
+}
+.avatar{
+    position: absolute;
+    top: 122rpx;
+    left: 255rpx;
+    width: 222rpx;
+    height: 222rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #f1f1f1;
+}
+.text-1{
+    position: absolute;
+    top: 262rpx;
+    left: 115rpx;
+	font-family: SourceHanSansCN-Light;
+	font-size: 30rpx;
+	line-height: 30rpx;
+}
+.text-2{
+    position: absolute;
+    top: 262rpx;
+    left: 497rpx;
+	font-family: SourceHanSansCN-Light;
+	font-size: 30rpx;
+	line-height: 30rpx;
+}
+.name{
+    position: absolute;
+    top: 392rpx;
+    font-size: 64rpx;
+    line-height: 30rpx;
+    text-align:center;
+    width:700rpx;
+}
+.text-3{
+    position: absolute;
+    left: 200rpx;
+    top: 487rpx;
+    font-size: 37rpx;
+}
+.company-logo{
+    position: absolute;
+    left: 95rpx;
+    top: 582rpx;
+    width: 90rpx;
+    height: 90rpx;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.company-name{
+    position: absolute;
+    left: 217rpx;
+    top: 572rpx;
+    font-size: 26rpx;
+}
+.company-tags{
+    position: absolute;
+    left: 217rpx;
+    top: 618rpx;
+    color: #0e79d0;
+    font-size: 16rpx;
+}
+.tag{
+    padding: 8rpx 15rpx;
+    background: #fff;
+    border-radius: 4rpx;
+    margin-right: 7rpx;
+}
+.tags-2{
+    position: absolute;
+    top: 44rpx;
+    left: 0;
+
+}
+.footer-text-1{
+    position: absolute;
+    left: 95rpx;
+    top: 811rpx;
+    font-size: 30rpx;
+}
+.footer-text-2{
+    position: absolute;
+    left: 525rpx;
+    top: 811rpx;
+    font-size: 30rpx;
+}
+.code{
+    position: absolute;
+    left: 270rpx;
+    top:732rpx;
+    width:196rpx;
+    height: 196rpx;
+}
+.create{
+    width: 604prx;
+	height: 80rpx;
+	background-color: #37a0db;
+    border-radius: 38rpx;
+    font-size: 38rpx;
+	line-height: 80rpx;
+	letter-spacing: 4rpx;
+    color: #ffffff;
+    padding: 0;
+    margin: 0 45rpx;
+    box-sizing: border-box;
+}

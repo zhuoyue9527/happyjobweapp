@@ -1,0 +1,228 @@
+<wxs src="../tools.wxs" module="globalTools" />
+<import src="../../plugins/wxParse/wxParse.wxml"/>
+
+<block wx:if="{{!isWelfare}}">
+<view class='panel {{type==1?"pt":""}}'>
+  <image src="{{imgServerUrl}}/images/detail/detail-bg.jpg" class="bg" mode='widthFix'/>
+  <view class='row job'>{{posName}}
+    <image class="auth" wx:if="{{approveState==1}}" src="{{imgServerUrl}}/images/detail/auth-has.png" mode="widthFix"/>
+  </view>
+  <block wx:if="{{fiveMoney+retManMoney+urgentMoney}}">
+    <view class='row award'>
+      <text class='award-info' wx:if="{{type==0}}">入职奖励最高<text class='money'>{{fiveMoney+retManMoney+urgentMoney}}元</text></text>
+      <text class='award-info' wx:if="{{type==1}}">入职奖励最高<text class='money'>{{fiveMoney+retManMoney+urgentMoney}}元</text></text>
+      <view bindtap="toPt" class="rule" wx:if="{{type==1}}">拼团规则</view>
+      <view bindtap='toFanxian' class="rule" wx:else>说明</view>
+    </view>
+  </block>
+  <view class='row pt-award' wx:if="{{type==1}}">
+    <text>参团上班奖励<text class="num">{{fiveMoney}}元</text></text>
+    <view class='toTuan' bindtap='fetchPtList'>去参团 <i-icon type="enter"></i-icon> </view>
+  </view>
+</view>
+
+<view class="card"  wx:if="{{type==0}}">
+  <view class="card-title">
+    <image class="card-title-icon" src="{{imgServerUrl}}/images/detail/icon-box.png" mode="widthFix"></image>
+    公司信息
+  </view>
+  <view class="card-content">
+    <image class="company-logo" src="{{imgServerUrl}}/images/temp/men.png"  mode="widthFix"/>
+    <view class="company-info">
+      <view class="company-name">{{comName}}</view>
+      <view class="color99">{{comScale}} | {{comType}}</view>
+    </view>
+  </view>
+  <view class="card-footer" wx:if="{{type==0}}">
+    <view class="address">
+      <image class="map-icon" src="{{imgServerUrl}}/images/detail/map-icon.png"  mode="widthFix"/>
+      <text class="text-overflow">{{addrDetail}}</text>
+    </view>
+    <image class="map" src="{{imgServerUrl}}/images/detail/map.png" mode="widthFix" bindtap='tomap' />
+  </view>
+</view>
+
+<view class="box">
+  <view class="tabs">
+    <view class="tab" data-top="{{basePos}}" bindtap='scrollTop' hover-class='hover-tabs'>基本信息</view>
+    <view class="tab" data-top="{{requirePos}}" bindtap='scrollTop' hover-class='hover-tabs'>岗位要求</view>
+    <view class="tab" data-top="{{otherWelfarePos}}" bindtap='scrollTop' hover-class='hover-tabs'>其他福利</view>
+    <view class="tab" data-top="{{jieshaoPos}}" bindtap='scrollTop' hover-class='hover-tabs'>公司详情</view>
+  </view>
+
+  <!-- 基本信息 -->
+  <view class="info-box topic" id="base">
+    <view class="topic-title">
+      <image class="icon-box" src="{{imgServerUrl}}/images/jianli/icon-box.png" mode="widthFix"/>
+      <view class="topic-text">基本信息</view>
+    </view>
+    <template wx:if="{{posDetail}}" is="wxParse" data="{{wxParseData:base.nodes}}"/>
+    <!-- <view class='info-row'>
+      <view class='info-title'>基本工资</view>
+      <view class='info-content'>3500元</view>
+    </view>
+    <view class='info-row'>
+      <view class='info-title'>其他补贴</view>
+      <view class='info-content'>夜班津贴：上夜班加发津贴8元/天 环境津贴：300元/月（限无尘室车间）</view>
+    </view>
+    <view class='info-row'>
+      <view class='info-title'>加班费</view>
+      <view class='info-content'>平时加班1.5倍，双休加班2倍，法定节假日3倍</view>
+    </view>
+    <view class='info-row'>
+      <view class='info-title'>发工资日</view>
+      <view class='info-content'>每月10日发放上月工资</view>
+    </view>
+    <view class='info-row'>
+      <view class='info-title'>工作时间</view>
+      <view class='info-content'>上六休一，8小时，三班倒</view>
+    </view>
+    <view class='info-row'>
+      <view class='info-title'>工作环境</view>
+      <view class='info-content'>穿防尘服</view>
+    </view> -->
+  </view>
+  <!-- 岗位要求 -->
+  <view class="info-box topic" id="require">
+    <view class="topic-title">
+      <image class="icon-box" src="{{imgServerUrl}}/images/jianli/icon-box.png" mode="widthFix"/>
+      <view class="topic-text">岗位要求</view>
+    </view>
+    <view class="tags">
+      <view class="tag" wx:if="{{reqAge}}">{{reqAge}}</view>
+      <view class="tag" wx:if="{{reqEducation}}">{{reqEducation}}</view>
+      <view class="tag" wx:if="{{reqExp}}">{{reqExp}}</view>
+      <view class="tag" wx:if="{{reqGender}}">{{reqGender}}</view>
+      <view class="tag" wx:if="{{reqSkill}}">{{reqSkill}}</view>
+      <view class="tag" wx:if="{{reqWorkYears}}">{{reqWorkYears}}</view>
+      <view class="tag" wx:for="{{globalTools.splitStr(reqOther,',')}}" wx:key="*this">{{item}}</view>
+    </view>
+  </view>
+  <!-- 其他福利 -->
+  <view class="info-box topic" id="otherWelfare">
+    <view class="topic-title">
+        <image class="icon-box" src="{{imgServerUrl}}/images/jianli/icon-box.png" mode="widthFix"/>
+        <view class="topic-text">其他福利</view>
+      </view>
+    <template wx:if="{{otherWelfare}}" is="wxParse" data="{{wxParseData:otherWelfare.nodes}}"/>
+    <!-- <view class='info-row'>
+      <view class='info-title-mini'>面试</view>
+      <view class='info-content'>26个英文字母  简单算术 简单汉字</view>
+    </view> -->
+  </view>
+  
+</view>
+<!-- 路线图 -->
+  <view class='path-route' wx:if="{{carDesc}}">
+    <text class='path-title' bindtap='toRoadsLine'>查看厂车线路详情</text>
+    <i-icon type="enter" />
+  </view>
+
+  <!-- 公司介绍 -->   
+  <view class="word-break com-desc"  id='jieshao'>
+    <view class='topic'>
+      <view class="topic-title">
+        <image class="icon-box" src="{{imgServerUrl}}/images/jianli/icon-box.png" mode="widthFix"/>
+        <view class="topic-text">公司介绍</view>
+      </view>
+      <template wx:if="{{posComDesc}}" is="wxParse" data="{{wxParseData:posComDesc.nodes}}"/>
+    </view>
+  </view>
+
+  <view class="address-box" wx:if="{{type==1}}">
+      <view class="address">
+        <image class="map-icon" src="{{imgServerUrl}}/images/detail/map-icon.png"  mode="widthFix"/>
+        <text class="text-overflow">{{addrDetail}}</text>
+      </view>
+      <image class="map" src="{{imgServerUrl}}/images/detail/map.png" mode="widthFix" bindtap='tomap'/>
+  </view>
+      
+  <!-- 客服 -->
+  <view class="kefu-box">
+    <view class="kefu-info">
+      <image class="kefu-icon" src="{{imgServerUrl}}/images/detail/kefu.png" mode="widthFix"/>
+      <view class="kefu-content">
+        <view class="kefu-title">开心客服电话：</view>
+        <view class="kefu-iphone">{{comCustPhone}}</view>
+      </view>
+    </view>
+    <image class="icon-iphone" src="{{imgServerUrl}}/images/detail/iphone.png" bindtap='phoneCall' mode="widthFix"/>
+  </view>
+
+  <!-- tips -->
+  <view class="tips">
+    <image class="icon-tips" src="{{imgServerUrl}}/images/detail/tips.png" mode="widthFix"/>
+    <text>以担保或任何理由索取财务，扣押证照，均涉嫌违法，请提高警惕</text>
+  </view>
+</block>
+<block wx:if="{{isWelfare}}">
+  <view class="welfare-container">
+    <template is="wxParse" data="{{wxParseData:welfareDetail.nodes}}"/>
+  </view>
+</block>
+  <!-- btn -->
+  <view class="btn-group {{isWelfare?'fixed-footer':''}}" wx:if="{{isOpen}}">
+    <form bindsubmit="applyJob" report-submit='true' wx:if="{{type==0 && !comApplyNum}}">
+      <button class="distance selfBtn" form-type="submit">免费申请工作</button>
+    </form>
+    <form bindsubmit="applyPt" report-submit='true' wx:if="{{type==1 && !hpPositionGroupId}}">
+      <button class="distance selfBtn" form-type="submit">申请开团</button>
+    </form>
+    <i-button type="primary" shape="circle" i-class="distance" wx:if="{{type==0 && comApplyNum}}">已申请</i-button>
+    <i-button bind:click="catPt" type="primary" shape="circle" i-class="distance" wx:if="{{type==1 && hpPositionGroupId}}">我的拼团</i-button>
+  </view>
+  <view class='btn-group' wx:if="{{!isOpen}}">
+  <i-button type="primary" shape="circle" i-class="distance">{{type==0?"岗位已结束":"拼团已结束"}}</i-button>
+  </view>
+
+<view class='pt-mask nobg' wx:if="{{isShowList}}">
+  <view class='pt-modal'>
+    <view class='pt-modal-header'>
+      <view class='pt-modal-title'>正在拼团</view>
+      <view class='pt-modal-cancle' bindtap='hideModal'>取消</view>
+    </view>
+    <view class='pt-modal-body'>
+      <view class='pt-list' wx:for="{{ptList}}" wx:key="hpUserId">
+        <view class='pt-avatar-box'>
+          <image class='pt-avatar' src='{{item.leaderPic}}' mode='scaleToFill'></image>
+        </view>
+        <view class='pt-info'>
+          <view class='row'>
+            <view class='name'>{{item.leaderName}}</view>
+            <view class='small'>还差<text class='num'>{{3-item.partNum}}</text>人</view>
+          </view>
+          <view class='row'>
+            <view class='djs'>
+              <text class='label'>倒计时</text>
+              <block wx:if="{{item.leftTime}}">
+                <i-count-down
+                  target="{{item.leftTime}}"
+                  bindcallback="myLinsterner"
+                  clear-timer="{{clearTimer}}"
+                  format="{{myFormat}}"
+                  show-day="{{true}}"
+                ></i-count-down>
+              </block>
+            </view>
+          </view>
+        </view>
+        <form bindsubmit="joinTuan" report-submit='true' data-groupid="{{item.hpPositionGroupId}}">
+          <button class='btn' form-type="submit">参团</button>
+        </form>
+      </view>
+      <view class='pt-null' wx:if="{{ptList.length==0}}">暂无拼团</view>
+    </view>
+    <view class='pt-modal-footer'></view>
+  </view>
+</view>
+
+<view class='auth-mask' wx:if="{{authMask}}">
+  <view class='auth-modal'>
+    <view class='title'>授权提示</view>
+    <view class='content'>当前服务需要获取您的位置信息，请确认授权</view>
+    <view class='footer' bindtap='hideAuth'>
+      <view class='btn'>暂不授权</view>
+      <button class='btn' open-type="openSetting">去授权</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,47 @@
+<image class="banner-bg" wx:if='{{data.storePic}}' src="{{data.storePic}}" mode="widthFix"/>
+<image class="banner-bg" wx:if='{{!data.storePic}}' src="https://weapp.hap-job.com/uploadFiles/images/detail/detail-bg.jpg" mode="widthFix"/>
+
+<view class="card marginT">
+    <view class="card-body pd46">
+        <view class="store-title">
+            <image class="logo" src="{{imgServerUrl}}/images/temp/men.png"></image>
+            <view class="info">
+                <view class="store-title">{{data.storeName}}</view>
+                <view class="work-hour" wx:if='{{data.workTime}}'>工作时间：{{data.workTime}}</view>
+            </view>            
+        </view>
+        <view class="list">
+            <view class="li">
+                <image class="icon icon-address" src="{{imgServerUrl}}/images/detail/map-icon.png" />
+                <text class="lable">门店地址</text>
+                <view class="content" wx:if='{{data.storeAddr}}'>{{data.storeAddr}}</view>
+                <image class="map" src="{{imgServerUrl}}/images/detail/map.png" bindtap='tomap'/>
+            </view>
+            <view class="li">
+                <image class="icon icon-phone" src="{{imgServerUrl}}/images/detail/iphone.png" />
+                <view class="lable">联系电话</view>
+                <text class="content" wx:if='{{data.contactNum}}' >{{data.contactNum}}</text>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="card marginT">
+    <view class="card-header">
+        <view class="title">交通指引</view>
+    </view>
+    <view class="card-body pd80">
+        <view class="route">{{data.storeTraffic}}</view>        
+    </view>
+</view>
+
+<view class='auth-mask' wx:if="{{authMask}}">
+  <view class='auth-modal'>
+    <view class='title'>授权提示</view>
+    <view class='content'>当前服务需要获取您的位置信息，请确认授权</view>
+    <view class='footer' bindtap='hideAuth'>
+      <view class='btn'>暂不授权</view>
+      <button class='btn' open-type="openSetting">去授权</button>
+    </view>
+  </view>
+</view>

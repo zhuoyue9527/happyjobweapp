@@ -1,0 +1,62 @@
+.banner {
+  border-top: 5rpx solid #f4f4f4;
+  border-bottom: 5rpx solid #f4f4f4;
+}
+.banner-img {
+  width: 100%;
+}
+.list {
+  background: #fff;
+}
+.list .li {
+  display: flex;
+  padding: 30rpx 26rpx;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eaeaea;
+}
+.list .li .pic {
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 6rpx;
+}
+.list .li .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5rpx 20rpx;
+  box-sizing: border-box;
+  flex-grow: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.list .li .info .name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 35rpx;
+  color: #323232;
+  font-family: 'PingFang-SC-Bold';
+  line-height: 30rpx;
+}
+.list .li .info .address {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 23rpx;
+  color: #909090;
+  line-height: 30rpx;
+}
+.list .li .info .phone {
+  display: flex;
+  align-items: center;
+}
+.list .li .info .phone-icon {
+  width: 26rpx;
+  height: 23rpx;
+}
+.list .li .info .phone-number {
+  font-size: 21rpx;
+  line-height: 30rpx;
+  color: #2289f5;
+  margin-left: 10rpx;
+}

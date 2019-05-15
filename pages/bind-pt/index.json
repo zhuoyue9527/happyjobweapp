@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "拼团上班",
+  "usingComponents": {
+    "i-button": "../../ui/button/index",
+    "i-input": "../../ui/input/index",
+    "i-count-down": "../../ui/count-down/index"
+  }
+}

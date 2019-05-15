@@ -1,0 +1,30 @@
+
+<view class="pt-status">
+    <image class="pt-bg" src="{{imgServerUrl}}/images/result/pt-success.png" mode="widthFix" wx:if="{{type=='pt' && status==1}}"/>
+    <image class="pt-bg" src="{{imgServerUrl}}/images/result/auth-fail.png" mode="widthFix" wx:if="{{type=='auth' && status==0}}"/>
+    <image class="pt-bg" src="{{imgServerUrl}}/images/result/auth-pending.png" mode="widthFix" wx:if="{{type=='auth' && status==2}}"/>
+</view>
+
+<block wx:if="{{type=='auth' && status==0}}">
+  <view class="box">
+    <view class="title">抱歉，您的申请未通过</view>
+    <view class="text">抱歉，您的资料信息存在不符，</view>
+    <view class="text">请重新核实后再注册。</view>   
+  </view>
+  <button class="btn-fail" bindtap="toAuth">重新申请</button>
+</block>
+
+<block wx:if="{{type=='pt' && status==1}}">
+  <view class="box">
+    <view class="title">恭喜您开团成功</view>
+    <view class="title">快邀请好友一起拼团上班吧</view>
+  </view>
+</block>
+
+<block wx:if="{{type=='auth' && status==2}}">
+  <view class="box">
+    <view class="title">提交成功，后台审核中……</view>
+    <view class="text">预计3个工作日内审核完毕，审核结果会短信通知</view>
+    <view class="text">到您的注册手机上。</view>
+  </view>
+</block>

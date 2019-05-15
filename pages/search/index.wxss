@@ -1,0 +1,84 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70rpx;
+  font-size: 28rpx;
+  padding-left: 35rpx;
+  box-sizing: border-box;
+}
+.icon-search{
+  flex: 0 0 auto;
+}
+.cancel{
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  color: #333 ;
+}
+.header .search{
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  height: 70rpx;
+  background:#f7f9fd;
+  border-radius: 35rpx;
+  line-height: 70rpx;
+  font-size: 24rpx;
+  margin-left: 15rpx;
+  padding-left: 10rpx;
+  color: #eee;
+  box-sizing: border-box;
+}
+.search-icon{
+  width: 30rpx;
+  height: 30rpx;
+}
+.search-input{
+  flex-grow: 1;
+  color: #333;
+}
+/* .bot-dist{
+  border-bottom: 20rpx solid #EDEBEB;
+} */
+.topic{
+  padding: 0 40rpx;
+  color: #333;
+  font-size: 28rpx;
+  margin-top: 20rpx;
+  box-sizing: border-box;
+}
+.topic .topic-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80rpx;
+}
+.trash{
+  width: 32rpx;
+}
+.record{
+  display: inline-block;
+  min-width: 150rpx;
+	height: 65rpx;
+  line-height: 65rpx;
+  text-align: center;
+  padding: 0 10rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+  font-size: 24rpx;
+  color: #323232;
+	background-color: #f0f5f6;
+	border-radius: 30px;
+}
+/* 搜索结果列表 */
+.search-list .li{
+  height: 90rpx;
+  line-height: 90rpx;
+  padding: 0 30rpx;
+  color: #333;
+  font-size: 28rpx;
+  border-bottom: 2rpx solid #eaeaea;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

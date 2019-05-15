@@ -1,0 +1,54 @@
+<import src="../../plugins/wxParse/wxParse.wxml"/>
+
+<view class='panel'>
+  <view class='row job' data-value="{{data.comApproveState}}">{{data.comName}}
+    <image wx:if="{{data.comApproveState==1}}" class="auth" src="{{imgServerUrl}}/images/detail/auth-has.png" mode="widthFix"/>
+  </view>
+  <view class='row award'>
+    <text class='award-info'><text class='money'>{{data.lowerNum}}-{{data.hightNum}}元/月</text></text>
+    <navigator url='../document/pt' wx:if="{{type==1}}"><view class="rule">说明</view></navigator>
+  </view>
+  <view class='row pt-award' wx:if="{{false}}">
+    <text>参团上班奖励<text class="num">1000元</text></text>
+    <view class='toTuan'>去参团 <i-icon type="enter"></i-icon> </view>
+  </view>
+</view>
+
+<view class="card top1" wx:if="{{true}}">
+  <view class="card-title">
+    <image class="card-title-icon" src="{{imgServerUrl}}/images/detail/icon-box.png" mode="widthFix"></image>
+    参团人员
+  </view>
+  <view class="card-content" >
+    <view class="avatar-box" wx:for='{{data.userList}}' wx:for-item="item" >
+      <view class="avatar-img">
+        <image class='avatar' src='{{item.headerPic}}'></image>
+      </view>
+    </view>   
+  </view>
+  <view class="card-footer">
+    <view class='djs' wx:if='{{data.leftTime}}' >倒计时：
+      <i-count-down target="{{data.leftTime}}" bindcallback="myLinsterner" clear-timer="{{clearTimer}}" format="{{myFormat}}" show-day="{{true}}"></i-count-down>
+    </view>
+  </view>
+</view>
+
+<view class="btn-group">
+  <i-button wx:if="{{data.groupStatus==0 && data.userIsPart==1}}" type="success" shape="circle" i-class="primay" open-type="share">邀请朋友参团</i-button>
+  <form bindsubmit="joinGroup" report-submit='true' data-groupid="{{item.hpPositionGroupId}}"  wx:if="{{data.groupStatus==0 && data.userIsPart!=1}}">
+    <button class="distance selfBtn" form-type="submit">一键参团</button>
+  </form>
+  <i-button wx:if="{{data.groupStatus==0 && data.userIsPart==1}}" bind:click="toShare" type="info" shape="circle" i-class="info">生成分享图片</i-button>
+  <i-button wx:if="{{data.groupStatus==1}}" type="success" shape="circle" i-class="info">拼团成功</i-button>
+</view>
+<view class="card">
+  <view class="card-title">
+    <image class="card-title-icon" src="{{imgServerUrl}}/images/detail/icon-box.png" mode="widthFix"></image>
+    招聘简章
+  </view>
+  <view class='card-content'>
+    <view class="desc">
+      <template is="wxParse" data="{{wxParseData:comdesc.nodes}}"/>
+    </view> 
+  </view>
+</view>

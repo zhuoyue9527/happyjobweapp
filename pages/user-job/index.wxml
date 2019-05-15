@@ -1,0 +1,43 @@
+
+<view class="page">
+  <view class='title'>
+    <image class='icon-box' src='{{imgServerUrl}}/images/jianli/icon-box.png' mode='widthFix'></image>
+    <text class='card-title'>求职意向</text>
+  </view>
+
+  <view class='group'>
+
+    <view class='list'>
+      <view class='list-title'>期望行业</view>
+      <view class='list-content border'>
+        <i-input class="row" value="{{ name }}" placeholder="50字以内" maxlength="50" i-class="input" bind:change="changeName"/>
+      </view>
+    </view>
+
+    <view class='list'>
+      <view class='list-title'>期望薪资</view>
+      <view class='list-content border'>
+        <picker bindchange="bindSalaryChange" value="{{salaryIndex}}" range="{{salaryList}}" range-key='hightNum'>
+          <view class="picker">
+            {{salaryList[salaryIndex].hightNum}}
+          </view>
+        </picker>
+      </view>
+    </view>
+
+    <view class='list'>
+      <view class='list-title'>期望地点</view>
+      <view class='list-content border'>
+        <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+          <view class="picker">
+            {{region[0]}}，{{region[1]}}，{{region[2]}}
+          </view>
+        </picker>
+      </view>
+    </view>
+
+  </view>
+
+  <i-button i-class="radius distance" bind:click="submit" type="primary" shape="circle">保存</i-button>
+
+</view>

@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "i-toast": "../../ui/toast/index",
+    "i-modal": "../../ui/modal/index",
+    "i-button": "../../ui/button/index",
+    "i-icon": "../../ui/icon/index",
+    "i-count-down": "../../ui/count-down/index"
+  }
+}

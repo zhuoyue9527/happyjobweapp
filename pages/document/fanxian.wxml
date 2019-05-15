@@ -1,0 +1,21 @@
+<view class="list">
+  <view class='list-title'>1.什么企业有返费？</view>
+  <view class='list-content'>企业因生产原因，为快速招到合适人员，会通过招聘方为入职员工提供一定的奖励。在开心工作平台上，支持入职返费的企业职位显示有返费信息</view>
+</view>
+<view class="list">
+  <view class='list-title'>2.我怎么申请入职返费的企业职位？</view>
+  <view class='list-content'>您可以在开心工作平台上申请带有入职返费的企业职位，申请工作，并按照面试通知到达指定地点参加面试。</view>
+</view>
+<view class="list">
+  <view class='list-title'>3.入职返费有什么条件？</view>
+  <view class='list-content'>您入职的企业职位支持入职返费；您入职的企业上班出勤打卡记录天数满足入职返费条件；</view>
+</view>
+<view class="list">
+  <view class='list-title'>4.我怎么领取入职返费的钱？</view>
+  <view class='list-content'>
+    <view class='row'>在您达到返费标准后，请在开心工作APP“我的”-“我的钱包”，提交凭证</view>
+    <view class='row'>请您按照页面提示，提交相关资料，我们将在7-15个工作日内对资料进行审核（因招聘方原因审核天数可能会有延长）。</view>
+    <view class='row'>审核通过后，奖励的钱将进入您的钱包。您可在钱包内将钱提现到银行卡、支付宝或微信。提交资料的有效期为入职之后90天内。    </view>
+    <view class='row'>每个职位返费的金额及返费的条件会有差异，具体以市场实际情况为准。</view>
+  </view>
+</view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "i-button": "../../ui/button/index",
+    "i-input": "../../ui/input/index",
+    "i-icon": "../../ui/icon/index"
+  }
+}

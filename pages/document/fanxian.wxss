@@ -1,0 +1,18 @@
+page{
+  padding: 0 84rpx;
+  font-size: 24rpx;
+  box-sizing: border-box;
+}
+.list{
+  border-bottom: 1px solid rgba(0,0,0,.2);
+  padding:37rpx 0;
+}
+.list-title{
+  font-size: 28rpx;
+  color: #2e2e2e;
+  line-height: 53rpx;
+}
+.list-content{
+  color: #7d7d7d;
+  line-height: 44rpx;
+}

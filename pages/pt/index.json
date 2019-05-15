@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "i-icon": "../../ui/icon/index",
+    "i-tag": "../../ui/tag/index",
+    "i-count-down": "../../ui/count-down/index"
+  }
+}

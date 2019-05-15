@@ -1,0 +1,63 @@
+.banner{
+    border-top:5rpx solid #f4f4f4;
+    border-bottom:5rpx solid #f4f4f4;
+    &-img{
+        width: 100%;
+    }
+}
+.list{
+    background: #fff;
+    .li{
+        display: flex;
+        padding: 30rpx 26rpx;
+        box-sizing: border-box;
+        border-bottom: 1px solid #eaeaea;
+        .pic{
+            width: 180rpx;
+            height: 180rpx;
+            border-radius: 6rpx;
+        }
+        .info{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 5rpx 20rpx;
+            box-sizing: border-box;
+            flex-grow: 1;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            .name{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-size: 35rpx;
+                color: #323232;
+                font-family: 'PingFang-SC-Bold';
+                line-height: 30rpx;
+            }
+            .address{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-size: 23rpx;
+                color: #909090;
+                line-height: 30rpx;
+            }
+            .phone{
+                display: flex;
+                align-items: center;
+                &-icon{
+                    width: 26rpx;
+	                height: 23rpx;
+                }
+                &-number{
+                    font-size: 21rpx;
+                    line-height: 30rpx;
+                    color: #2289f5;
+                    margin-left: 10rpx;
+                }
+            }
+        }
+        
+    }
+}

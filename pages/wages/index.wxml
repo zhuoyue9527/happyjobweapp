@@ -1,0 +1,75 @@
+<view class="container">
+  <view class='row bd-bottom'>
+    <i-input class="row" i-class="self" value="{{realName}}" title="姓名：" disabled/>
+  </view>
+  <view class='row bd-bottom'>
+    <i-input class="row" i-class="self" value="{{idNum}}" title="身份证号：" disabled/>
+  </view>
+
+  <view class='group row'>
+    <view class='label'>工资详情：</view>
+    <view class='select'>
+      <picker
+        mode="date"
+        fields='month'
+        start='2000-01'
+        end='2300-01'
+        bindchange="bindMultiPickerChange"
+        bindcolumnchange="bindMultiPickerColumnChange"
+      >
+        <view class="picker">{{multiArray[0]}}年{{multiArray[1]}}月</view>
+      </picker>
+      <i-icon type="unfold" class='select-arrow'/>
+    </view>
+  </view>
+  <view class='table-container' wx:if='{{detailFlag}}' > 
+    <view class='table'>
+      <view class='table-tr'>
+        <view class='table-td'>姓名</view>
+        <view class='table-td'>{{data.payName}}</view>
+      </view>
+      <view class='table-tr'>
+        <view class='table-td'>身份证号</view>
+        <view class='table-td'>{{data.payIdNum}}</view>
+      </view>
+      <view class='table-tr'>
+        <view class='table-td'>工号</view>
+        <view class='table-td'>{{data.workNum}}</view>
+      </view>
+      <view class='table-tr'>
+        <view class='table-td'>公司名称</view>
+        <view class='table-td'>{{data.payComName}}</view>
+      </view>
+      <view class='table-tr'>
+        <view class='table-td'>工资月份</view>
+        <view class='table-td'>{{data.payTime}}</view>
+      </view>
+      <view class='table-tr'>
+        <view class='table-td'>应发合计</view>
+        <view class='table-td'>{{data.shouldMoney}}</view>
+      </view>
+      <view class='table-tr'>
+        <view class='table-td'>扣款合计</view>
+        <view class='table-td'>{{data.deductionMoney}}</view>
+      </view>
+      <view class='table-tr'>
+        <view class='table-td'> 实发工资</view>
+        <view class='table-td'>{{data.realMoney}}</view>
+      </view>
+      <view class='table-tr' wx:for="{{data.payDetail}}" wx:for-index="idx" wx:for-item="item" wx:key='*this' >
+        <view class='table-td'>{{item.key}}</view>
+        <view class='table-td'>{{item.value}}</view>
+
+      </view>
+      
+    </view>
+  </view>
+
+  <view class='nullpage' wx:if="{{!detailFlag}}">
+    <view class='row'>未查到您的工资条</view>
+    <view class='row'>请在发薪日2日后查询</view>
+    <view class='row'>给您带来不便，敬请谅解</view>
+  </view>
+
+  <view class='remarks'>备注： 若未查到您的工资信息，可能工资条尚未上传</view>
+</view>

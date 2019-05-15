@@ -1,0 +1,30 @@
+page{
+  padding:44rpx 38rpx 0 88rpx;
+  box-sizing: border-box;
+  font-size: 25rpx;
+}
+.title{
+	line-height: 31rpx;
+	letter-spacing: 3rpx;
+	color: #c94b3e;
+}
+.ul{
+  position: relative;
+  margin-top: 42rpx;
+  margin-bottom: 50rpx;
+  color: #2e2e2e;
+  line-height: 53rpx;
+	letter-spacing: 1px;
+  counter-reset:sectioncounter;
+}
+.li:before {  
+    content:counter(sectioncounter) "、";   
+    counter-increment:sectioncounter;  
+    position: absolute;
+    left: -32rpx;
+ } 
+ .copyright{
+  font-size: 22rpx;
+  line-height: 31rpx;
+  color: #36a0db;
+ }

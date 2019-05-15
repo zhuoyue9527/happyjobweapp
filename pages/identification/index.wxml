@@ -1,0 +1,50 @@
+<view class='process'>
+  <image class="bg" src="{{imgServerUrl}}/images/identification/bg.jpg"/>   
+  <view class="process-box">
+    <view class="row title"><image class="user-tip" src="{{imgServerUrl}}/images/identification/user-tip.png" mode="widthFix"/>申请身份认证流程流程：</view>
+    <view class="row desc">上传身份证正反面——手拿身份证拍照——等待审核——审核通过</view>
+  </view>
+</view>
+
+<view class='input-box'>
+  <view class='row'>
+    <image class="user" src="{{imgServerUrl}}/images/identification/user.png" mode="widthFix"/>
+    <i-input class="input" value="{{ realName }}" placeholder="请输入姓名" bind:change="changeName" maxlength="6"/>
+  </view>
+
+  <view class='row'>
+    <image class="idcode" src="{{imgServerUrl}}/images/identification/idcard.png" mode="widthFix"/>
+    <i-input class="input" value="{{ idNum }}" placeholder="请输入身份证号码" bind:change="changeId" maxlength="18"/>
+  </view>
+</view>
+
+<view class='id-container'>
+  <view class='idBox'>
+    <view class="card-box">
+      <image class="addImg" src="{{imgServerUrl}}/images/identification/camera.png" mode='widthFix' data-index="{{1}}" bindtap='chooseImage'/>
+      <image class="idCard" wx:if="{{idFrontPic}}" src="{{idFrontPic}}" />
+      <image class="idCard" wx:else src="{{imgServerUrl}}/images/identification/id_front.png" />
+    </view>
+    <view class="text"><text class="circle left">1</text> 上传身份证正面</view>
+  </view>
+  <view class='idBox'>
+    <view class="text"><text class="circle">2</text> 上传身份证反面</view>
+    <view class="card-box">
+      <image class="addImg" src="{{imgServerUrl}}/images/identification/camera.png" mode='widthFix' data-index="{{2}}" bindtap='chooseImage'/>
+      <image class="idCard" wx:if="{{idBackPic}}" src="{{idBackPic}}"/>
+      <image class="idCard" wx:else src="{{imgServerUrl}}/images/identification/id_back.png" />
+    </view>
+  </view>
+  <view class='idBox'>
+    <view class="card-box">
+      <image class="addImg" src="{{imgServerUrl}}/images/identification/camera.png" mode='widthFix' data-index="{{3}}" bindtap='chooseImage'/>
+      <image class="idCard" wx:if="{{idPersonPic}}" src="{{idPersonPic}}"/>
+      <image class="idCard" wx:else src="{{imgServerUrl}}/images/identification/id_face.png" />
+    </view>
+    <view class="text"><text class="circle left">3</text> 手持身份证拍照</view>
+  </view>
+</view>
+
+<form bindsubmit="submit" report-submit='true'>
+  <button class="save" form-type="submit">确认提交</button>
+</form>

@@ -1,0 +1,13 @@
+<view class="title">请认真阅读拼团规则</view>
+
+<view class='ul'>
+  <view class='li'>拼团有效期从开团起，到该拼团岗位结束前1小时</view>
+  <view class='li'>拼团有效期内，拼团人数达到3人，则拼团成功，未达到3人视为拼团失败，如在拼团有效期内拼团人数超过3人，也可成团，上不封顶</view>
+  <view class='li'>拼团总人数达5人或5人以上，可叠加奖励金，具体以当天实际情况为准</view>
+  <view class='li'>奖励金领取规则，依据返费规则，并与返费同时发放</view>
+  <view class='li'>拼团奖励金以当天实际情况为准</view>
+  <view class='li'>拼团规则不与经纪人规则同时适用</view>
+  <view class='li'>具体可咨询客服电话：400-692-0099</view>
+</view>
+
+<view class='copyright'>最终解释权归开心工作有限公司所有</view>

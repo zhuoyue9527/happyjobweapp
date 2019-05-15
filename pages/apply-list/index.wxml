@@ -1,0 +1,29 @@
+<wxs src="../tools.wxs" module="globalTools" />
+<view class='box-body'>
+  <view class='box-item' wx:for="{{list}}" wx:key="hpPositionId" bindtap='toDetail' data-id="{{item.hpPositionId}}" data-type="{{item.groupOn}}"  data-welfare="{{item.welfareOn}}" hover-class="item-hover" data-lefttime='{{item.groupLeftTime}}' >
+    
+    <view class='box-item-info'>
+      <view class='one'>
+        <view class='left'>
+          <text class='job'>{{item.posName}}</text>
+          <text class='fan' wx:if="{{item.retManMoney}}">返{{item.retManMoney}}元</text>
+        </view>
+        <view class='right pt-duofan' wx:if="{{item.groupOn && (item.fiveMoney || item.threeMoney)}}">拼团多返{{item.fiveMoney||item.threeMoney}}元</view>        
+      </view>
+      <view class='two'>
+        <view class='commpany'>{{item.comName}}</view>
+        <view class='area'>
+          <i-icon type="coordinates_fill" />
+          <text class='area-name'>{{item.cityName}}-{{item.countyName}}</text>
+        </view>
+      </view>
+      <view class='three'>
+        <view class='salary' wx:if="{{item.hpPositionSalaryId==-1}}">不限</view>
+        <view class='salary' wx:elif="{{item.hpPositionSalaryId == 0 }}">面议</view>        
+        <view class='salary' wx:else>{{item.lowerNum}}-{{item.hightNum}} <text class="danwei">元</text></view>
+        <view class='time'>申请日期：{{globalTools.formatemd(item.startTime*1000)}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<i-divider wx:if="{{currentPage>1 && currentPage>=totalPage}}">加载已经完成,没有其他数据</i-divider>

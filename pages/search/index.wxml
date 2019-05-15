@@ -1,0 +1,23 @@
+<view class="header">
+  <view class='search'>
+    <i-icon class="icon-search" type="search" size='24' color='#aaa'/>
+    <input class='search-input' type='text' confirm-type="search" value="{{searchVal}}" bindinput='bindKeyInput' bindconfirm="toSearchPage" placeholder="请输入您要找的职位、企业名" auto-focus/>
+  </view>
+  <view class='cancel' bindtap='toSearchPage'>搜索</view>
+</view>
+
+  <view class='history topic'>
+    <view class='topic-header'>
+      <view class='history-title'>搜索历史</view>
+       <i-icon class='trash' type="trash" size='24' color='#999' bindtap='delHistory' data-id="all"/>
+    </view>
+    <view class='record-list'>
+      <view class='record' wx:for="{{historyList}}" wx:key="{{item.hpUserSearchId}}"  data-id="{{item.hpUserSearchId}}" data-value="{{item.content}}" bindtap='selectMsg' bindlongpress="delHistory" >{{item.content}}</view>
+    </view>
+  </view>
+
+<block wx:if="{{false}}">
+   <view class='search-list'>
+    <view class='li' wx:for="{{filterWordList}}" data-value="{{item}}" bindtap='selectMsg'>{{item}}</view>
+   </view>
+</block>

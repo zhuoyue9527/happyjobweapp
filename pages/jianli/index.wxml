@@ -1,0 +1,127 @@
+<wxs src="../tools.wxs" module="globalTools" />
+<view class="contanier">
+  <image class="bg" src="{{imgServerUrl}}/images/jianli/jianli_bg.png" mode="widthFix" />
+  <!-- 基本信息 -->
+  <view class='card mgT70'>
+    <view class='card-hd'>
+      <view class='card-hd-title'>
+        <image class='icon-box' src='{{imgServerUrl}}/images/jianli/icon-box.png' mode='widthFix'></image>
+        <text class='card-title'>基本信息</text>
+      </view>
+      <view class='extra' bindtap='toUserInfo'>
+        <image class='icon-edit' src='{{imgServerUrl}}/images/jianli/edit.png' mode='widthFix'></image>
+      </view>
+    </view>
+
+    <view class='card-bd'>
+      <view class="flex person-panel">
+        <image class="avatar" src="{{resumeBase.resPic}}" mode="widthFix"/>
+        <view class="info">
+          <view class="flex">
+            <text class="name">{{resumeBase.resName}}</text>
+            <image class="icon-sex" wx:if="{{resumeBase.resGender==1}}" src="{{imgServerUrl}}/images/jianli/sex-man.png" mode="widthFix"/>
+            <image class="icon-sex" wx:else src="{{imgServerUrl}}/images/jianli/sex-woman.png" mode="widthFix"/>
+          </view>
+          <view class="tags">
+            <text class="tag" wx:if="{{resumeBase.resBornTime}}">{{resumeBase.resBornTime}}</text>
+            <text class="tag" wx:if="{{eduName}}">{{eduName}}</text>
+            <!-- <text class="tag" wx:if="{{expYear}}">经验{{expYear}}年</text> -->
+          </view>
+        </view>
+      </view>
+      <view class="flex justify-between size10 contact">
+        <view class="flex justify-between align-center">
+          <image class="icon-iphone" src="{{imgServerUrl}}/images/jianli/iphone.png" mode="widthFix"/>
+          <text class="xingxin">{{resumeBase.resPhone}}</text>
+        </view>
+        <view class="flex align-center email">
+          <!-- <image class="icon-email" src="{{imgServerUrl}}/images/jianli/email.png" mode="widthFix"/>
+          <text class="xingxin">154534153132</text> -->
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 求职意向 -->
+  <view class='card'>
+    <!-- noBorder -->
+    <view class='card-hd'>
+      <view class='card-hd-title'>
+        <image class='icon-box' src='{{imgServerUrl}}/images/jianli/icon-box.png' mode='widthFix'></image>
+        <text class='card-title'>求职意向</text>
+      </view>
+      <view class='extra' bindtap='toUserJob' data-type="new">
+        <image class='icon-edit' src='{{imgServerUrl}}/images/jianli/edit.png' mode='widthFix'></image>
+      </view>
+    </view>
+    <block wx:if="{{intentionList.length}}">
+      <view class='card-bd' wx:for="{{intentionList}}" wx:key="hpUserIntentionId" bindtap='toUserJob' data-type="edit" data-index="{{index}}">
+        <view class='form qiuzhi'>
+          <view class='row'><text class="label">期望行业</text>{{item.posType}}</view>
+          <view class='row'><text class="label">期望地址</text>{{item.workArea}}</view>
+          <view class='row'><text class="label">期望薪资</text>{{item.lowerNum}}-{{item.hightNum}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <!-- 工作经验 -->
+  <view class='card'>
+    <view class='card-hd'>
+      <view class='card-hd-title'>
+        <image class='icon-box' src='{{imgServerUrl}}/images/jianli/icon-box.png' mode='widthFix'></image>
+        <text class='card-title'>工作经验</text>
+      </view>
+      <view class='extra' bindtap='toUserWorks' data-type="new">
+        <image class='icon-edit' src='{{imgServerUrl}}/images/jianli/edit.png' mode='widthFix'></image>
+      </view>
+    </view>
+
+    <view class='card-bd padLeft' wx:if="{{expList.length}}">
+      <i-steps  direction="vertical">
+        <i-step icon="collection" wx:for="{{expList}}" wx:key="hpUserResumeId" bindtap="toUserWorks" data-type="edit" data-index="{{index}}">
+            <view slot="content">
+                <view class='row color90'>{{globalTools.formateym((item.startTime+'000'),".")}} - {{globalTools.formateym((item.endTime+'000'),".")}}</view>
+                <view class='row strong'>{{item.comName}}</view>
+                <view class='row color90'>{{item.posType}}</view>
+            </view>
+        </i-step>
+      </i-steps>
+    </view>
+
+    <view class="card-bd input-padding" wx:else>
+      <view class="input">添加工作经历</view>
+    </view>
+
+  </view>
+
+  <!-- 教育背景 -->
+  <view class='card'>
+    <view class='card-hd'>
+      <view class='card-hd-title'>
+        <image class='icon-box' src='{{imgServerUrl}}/images/jianli/icon-box.png' mode='widthFix'></image>
+        <text class='card-title'>教育背景</text>
+      </view>
+      <view class='extra' bindtap='toUserEdu' data-type="new">
+        <image class='icon-edit' src='{{imgServerUrl}}/images/jianli/edit.png' mode='widthFix'></image>
+      </view>
+    </view>
+
+    <view class='card-bd padLeft' wx:if="{{eduList.length}}">
+      <i-steps  direction="vertical">
+        <i-step icon="collection" wx:for="{{eduList}}" wx:key="hpEducationId"  bindtap='toUserEdu' data-type="edit" data-index="{{index}}">
+            <view slot="content">
+                <view class='row color90'>{{globalTools.formateym((item.startTime+'000'),".")}} - {{globalTools.formateym((item.endTime+'000'),".")}}</view>
+                <view class='row strong'>{{item.schName}}</view>
+                <view class='row color90'>{{item.eduName}}</view>
+            </view>
+        </i-step>
+      </i-steps>
+    </view>
+    <view class="card-bd input-padding" wx:else>
+      <view class="input">添加教育背景</view>
+    </view>
+  </view>
+
+
+</view>

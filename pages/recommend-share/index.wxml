@@ -1,0 +1,28 @@
+<view class="top-bg">
+    <!-- <image class="award-title" src="{{imgServerUrl}}/images/recommend/title.png" mode="widthFix" />
+    <view class="desc">
+        <view >每邀请1位新用户注册</view>
+        <view >即可得5元现金红包</view>
+    </view> -->
+    <image class='awardBg' src='{{imgServerUrl}}/images/recommend/awardBg.png' mode='widthFix'></image>
+</view>
+
+<i-notice-bar icon="systemprompt" loop background-color="#ffc" color="#169bd5" wx:if="{{false}}">
+  <text style='color:#333'>恭喜XXX邀请2名好友，获得<text style='color:red'>10</text>元红包</text>
+</i-notice-bar>
+
+<view class='box'>
+    <image class="card" src="{{imgServerUrl}}/images/recommend/step.png" mode="widthFix"/>
+    <view class="yao-box">
+        <view class="ms">
+            <view>我在【开心工作】</view>
+            <view>赚了5块钱</view>
+            <view>扫码分享给你</view>
+        </view>
+        <image src="{{qrCode}}" class="qycode" />
+    </view>
+    <button class="create" bindtap='onCreatePoster' wx:if="{{hasAuth}}">保存图片</button>
+    <button class="create" open-type="openSetting" bindopensetting="onCreatePoster" wx:else>打开授权页</button>
+</view>
+<poster id="poster" hide-loading="{{true}}" preload="{{false}}" config="{{posterConfig}}" bind:success="onPosterSuccess" bind:fail="onPosterFail">
+</poster>
